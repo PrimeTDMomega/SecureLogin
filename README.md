@@ -1,6 +1,9 @@
 # SecureLogin
 This repository contains a simple secure login system consisting of three Python files: `server.py`, `database.py`, and `client.py`.
 
+This login system is immune to SQL injections and uses `hashlib` library to hash the passwords so even if you leak the database by-mistake then they won't be able to get your passwords
+
+
 ## Server
 The `server.py` file contains the logic for the server-side of the login system. It creates a socket to listen for incoming client connections, and uses the `sqlite3` module to connect to a database named `userdata.db`. This database contains a table `userdata` with three columns: `id`, `username`, and `password`.
 
